@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>???</title>
+  </head>
+  <body>
+
+<script>
+"use strict"
+var name=prompt('Введите Ваше имя');
+while(name){
+   if (name.length<2)
+   name=prompt('Введите Ваше имя корректно');
+else break;}
+
+
+var famName=prompt('Введите Вашу фамилию.');
+while(famName)
+   if (famName.length<2){
+   famName=prompt('Введите Вашу фамилию корректно');
+else break;}
+
+var fatherName=prompt('Введите Ваше отчество.');
+while(fatherName){
+   if (fatherName.length<2)
+   fatherName=prompt('Введите Ваше отчество корректно');
+ else break;}
+
+var ageS=prompt('Введите Ваш возраст.');
+ var age=parseInt(ageS);
+
+   while(age){
+     if ((age>0)&&(age<100))
+       break;
+    ageS=prompt('Введите Ваш возраст корректно.');
+    age=parseInt(ageS);
+    }
+var gender=confirm('Выберите Ваш пол. Если Вы мужчина, то нажмите "ОК". Если Вы женщина - нажмите "ОТМЕНА".')
+var genderS=(gender)?'мужской':'женский';
+var planka=(gender)?63:58;
+var pension=(age>=planka)?'да':'нет';
+var pension=
+alert('ваше ФИО: '+name+' '+famName+' '+fatherName+
+         '\nваш возраст в годах: '+age+
+         '\nваш возраст в днях: '+(age*365)+
+         '\nчерез 5 лет вам будет: '+(age+5)+
+         '\nваш пол: '+genderS+
+         '\nвы на пенсии: '+pension);
+       
+
+</script>
+  </body>
+</html>
